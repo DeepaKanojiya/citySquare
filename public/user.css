@@ -1,0 +1,166 @@
+/* General Styling */
+body {
+  font-family:"Plain Light";
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #0062cc, #004085);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 4px solid #003366;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+/* Main Section Styling */
+main {
+  padding: 40px 0;
+}
+
+/* Form Container Styling */
+.form-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  z-index: 1;
+}
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+  border-radius: 12px;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+/* Form Element Styling */
+label {
+  display: block;
+  margin: 20px 0 8px;
+  font-weight: 600;
+  color:black;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: #0062cc;
+  box-shadow: 0 0 5px rgba(0, 98, 204, 0.5);
+  outline: none;
+}
+
+/* Fieldset Styling */
+fieldset {
+  margin: 20px 0;
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Radio Button Group Styling */
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+label input[type="radio"] {
+  margin-right: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #0062cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: #004085;
+  transform: translateY(-2px);
+}
+
+footer {
+  background: #343a40;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 28px;
+  }
+
+  header p {
+      font-size: 16px;
+  }
+
+  .form-container {
+      padding: 20px;
+  }
+}
+
