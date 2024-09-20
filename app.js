@@ -60,7 +60,7 @@ app.post("/register", async (req, res) => {
     //   ready_to_get_leads,
     // });
 
-    // res.render("landing");
+    res.render("landing");
   } catch (err) {
     console.log(err.message);
     return res.sendStatus(400);
