@@ -35,9 +35,9 @@ app.post("/register", async (req, res) => {
     });
 
     if (duplicateUser) {
-       res.redirect("register", {
+       res.redirect({
         message: "Duplicate user found",
-      });
+      },"register");
       
     }
 
