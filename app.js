@@ -28,16 +28,6 @@ app.post("/register", async (req, res) => {
     ready_to_get_leads,
   } = req.body;
 
-  console.log(
-    name,
-    number,
-    email,
-    location,
-    property_type,
-    value,
-    ready_to_get_leads
-  );
-
   try {
     const duplicateUser = await User.findOne({
       number,
@@ -45,20 +35,23 @@ app.post("/register", async (req, res) => {
     });
 
     if (duplicateUser) {
-      return res.render("register", {
+       res.redirect("register", {
         message: "Duplicate user found",
       });
+      
     }
 
-    // const result = await User.create({
-    //   name,
-    //   number,
-    //   email,
-    //   location,
-    //   property_type,
-    //   value,
-    //   ready_to_get_leads,
-    // });
+    const result = await User.create({
+      name,
+      number,
+      email,
+      location,
+      property_type,
+      value,
+      ready_to_get_leads,
+    });
+
+
 
     res.render("landing");
   } catch (err) {
